@@ -1,0 +1,20 @@
+HOW TO PUT THIS ON GITHUB (Day 1-2)
+
+1. On github.com click New repository. Name: northbridge-grc. Public. Do NOT add a README (you already have one).
+2. Unzip this pack. Open the northbridge-grc folder in VS Code (File > Open Folder).
+3. Open the terminal in VS Code (Terminal > New Terminal) and run, replacing YOUR-USERNAME:
+
+   git init
+   git add .
+   git commit -m "Day 1-2: repo structure, company profile, ISMS scope"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/northbridge-grc.git
+   git push -u origin main
+
+4. If Git asks who you are, run these once, then repeat the commit:
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+5. Refresh the GitHub page. Your README and Mermaid diagram should show.
+6. Settings > Branches: leave for Day 20.
+
+Then edit company-profile.md and isms-scope.md to make them yours, commit and push again.

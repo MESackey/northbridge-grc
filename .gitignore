@@ -1,0 +1,20 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl.bak
+
+# Secrets - NEVER commit these
+.env
+*.pem
+*.key
+credentials
+.aws/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
