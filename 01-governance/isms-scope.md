@@ -39,4 +39,4 @@ ISO/IEC 27001:2022, UK GDPR and Data Protection Act 2018, SOC 2 customer commitm
 ## 7. Approval
 | Version | Date | Author | Approved by |
 |---|---|---|---|
-| 0.1 | _date_ | _your name_ | _CEO (fictional)_ |
+| 0.1 | 17 October 2026 | Matthew Sackey | _CEO (fictional)_ |
