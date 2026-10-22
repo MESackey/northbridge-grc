@@ -1,34 +1,34 @@
 Control ID,Theme,Control name,Applicable (Yes/No),Justification,Implementation status,Evidence (link or file),Owner,Related risks
-A.5.1,Organisational,Policies for information security,,,,,,
-A.5.2,Organisational,Information security roles and responsibilities,,,,,,
-A.5.3,Organisational,Segregation of duties,,,,,,
-A.5.4,Organisational,Management responsibilities,,,,,,
-A.5.5,Organisational,Contact with authorities,,,,,,
-A.5.6,Organisational,Contact with special interest groups,,,,,,
-A.5.7,Organisational,Threat intelligence,,,,,,
-A.5.8,Organisational,Information security in project management,,,,,,
-A.5.9,Organisational,Inventory of information and other associated assets,,,,,,
-A.5.10,Organisational,Acceptable use of information and other associated assets,,,,,,
-A.5.11,Organisational,Return of assets,,,,,,
-A.5.12,Organisational,Classification of information,,,,,,
-A.5.13,Organisational,Labelling of information,,,,,,
-A.5.14,Organisational,Information transfer,,,,,,
-A.5.15,Organisational,Access control,,,,,,
-A.5.16,Organisational,Identity management,,,,,,
-A.5.17,Organisational,Authentication information,,,,,,
-A.5.18,Organisational,Access rights,,,,,,
-A.5.19,Organisational,Information security in supplier relationships,,,,,,
-A.5.20,Organisational,Addressing information security within supplier agreements,,,,,,
-A.5.21,Organisational,Managing information security in the ICT supply chain,,,,,,
-A.5.22,Organisational,"Monitoring, review and change management of supplier services",,,,,,
-A.5.23,Organisational,Information security for use of cloud services,,,,,,
-A.5.24,Organisational,Information security incident management planning and preparation,,,,,,
-A.5.25,Organisational,Assessment and decision on information security events,,,,,,
-A.5.26,Organisational,Response to information security incidents,,,,,,
-A.5.27,Organisational,Learning from information security incidents,,,,,,
-A.5.28,Organisational,Collection of evidence,,,,,,
-A.5.29,Organisational,Information security during disruption,,,,,,
-A.5.30,Organisational,ICT readiness for business continuity,,,,,,
+A.5.1,Organisational,Policies for information security,Yes,Policies give management direction on security and are reviewed yearly,Partially implemented,"01-governance/policies/ (three policies, v0.1 draft)",Head of Security and Compliance,
+A.5.2,Organisational,Information security roles and responsibilities,Yes,Roles and responsibilities are defined for the ISMS and in every policy,Partially implemented,01-governance/isms-scope.md; 01-governance/three-lines-of-defence.md,Head of Security and Compliance,
+A.5.3,Organisational,Segregation of duties,Yes,"Conflicting duties are kept apart, such as admin and day-to-day accounts",Partially implemented,01-governance/policies/access-control-policy.md (statements 4 and 7),CTO,
+A.5.4,Organisational,Management responsibilities,Yes,Management must make sure staff follow the policies,Partially implemented,01-governance/policies/ (CEO approval and enforcement sections),CEO,
+A.5.5,Organisational,Contact with authorities,Yes,Contacts with the ICO and law enforcement must be ready for a breach,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.6,Organisational,Contact with special interest groups,Yes,Staying informed through NCSC and security groups keeps defences current,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.7,Organisational,Threat intelligence,Yes,Threat information helps prioritise defences for a patient-data platform,Planned,Lab assumption: no document yet,CTO,
+A.5.8,Organisational,Information security in project management,Yes,"New projects, such as ML features, need a security review from the start",Planned,Lab assumption: no document yet,CTO,
+A.5.9,Organisational,Inventory of information and other associated assets,Yes,You cannot protect assets you have not listed,Partially implemented,Register R-009 existing controls (device inventory only),CTO,
+A.5.10,Organisational,Acceptable use of information and other associated assets,Yes,"Staff need clear rules for using devices, accounts and data",Partially implemented,01-governance/policies/acceptable-use-policy.md,Head of Operations,R-011
+A.5.11,Organisational,Return of assets,Yes,Leavers must hand back laptops and equipment,Planned,Lab assumption: no document yet,Head of Operations,
+A.5.12,Organisational,Classification of information,Yes,Patient data is special category data and needs classification levels,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.13,Organisational,Labelling of information,Yes,Labels show staff how to handle each class of information,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.14,Organisational,Information transfer,Yes,Patient data must only move through approved channels,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 5),CTO,
+A.5.15,Organisational,Access control,Yes,Access to patient data must follow need-to-know,Planned,"01-governance/policies/access-control-policy.md (policy written; enforcement planned, see R-004)",CTO,R-004
+A.5.16,Organisational,Identity management,Yes,Every user needs their own account so actions can be traced,Partially implemented,01-governance/policies/access-control-policy.md (statement 2),CTO,
+A.5.17,Organisational,Authentication information,Yes,Passwords and MFA tokens must be kept secret and handled safely,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 2); 01-governance/policies/access-control-policy.md (statement 3),CTO,
+A.5.18,Organisational,Access rights,Yes,"Access rights must be approved, reviewed and removed on time",Planned,"01-governance/policies/access-control-policy.md (policy written; reviews planned, see R-004)",CTO,R-004
+A.5.19,Organisational,Information security in supplier relationships,Yes,Suppliers such as the SMS provider handle patient data,Partially implemented,Register R-006 existing controls (basic confidentiality clause),Head of Operations,R-006; R-013
+A.5.20,Organisational,Addressing information security within supplier agreements,Yes,Supplier contracts must state security and breach-notification duties,Partially implemented,Register R-006 existing controls (basic confidentiality clause),Head of Operations,R-006
+A.5.21,Organisational,Managing information security in the ICT supply chain,Yes,"Risks in the supply chain, such as software and cloud vendors, need managing",Planned,"01-governance/policies/ai-tools-policy.md (AI vendors only; wider process planned, see R-006)",Head of Operations,R-006
+A.5.22,Organisational,"Monitoring, review and change management of supplier services",Yes,Supplier services must be monitored and reviewed over time,Planned,Lab assumption: no document yet,Head of Operations,R-006; R-013
+A.5.23,Organisational,Information security for use of cloud services,Yes,"Northbridge runs on AWS and SaaS, so cloud use needs rules",Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 7),CTO,R-013
+A.5.24,Organisational,Information security incident management planning and preparation,Yes,A prepared incident process keeps breach reporting inside 72 hours,Partially implemented,Register R-010 existing controls (general incident response plan),CTO,R-010
+A.5.25,Organisational,Assessment and decision on information security events,Yes,Events must be assessed quickly to decide if they are incidents,Partially implemented,Register R-010 existing controls (general incident response plan),CTO,R-010
+A.5.26,Organisational,Response to information security incidents,Yes,"Incidents need a defined, practised response",Partially implemented,Register R-010 existing controls (general incident response plan),CTO,R-010
+A.5.27,Organisational,Learning from information security incidents,Yes,Lessons from incidents should reduce repeat events,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.28,Organisational,Collection of evidence,Yes,Evidence must be collected properly for ICO or legal needs,Planned,Register R-010 planned controls (breach runbook),CTO,R-010
+A.5.29,Organisational,Information security during disruption,Yes,Security must hold up during an outage or disruption,Planned,Lab assumption: no document yet,CTO,
+A.5.30,Organisational,ICT readiness for business continuity,Yes,"Clinics rely on the platform, so recovery readiness matters",Partially implemented,Register R-003 existing controls (daily backups; London region hosting),CTO,R-003
 A.5.31,Organisational,"Legal, statutory, regulatory and contractual requirements",,,,,,
 A.5.32,Organisational,Intellectual property rights,,,,,,
 A.5.33,Organisational,Protection of records,,,,,,
@@ -36,27 +36,27 @@ A.5.34,Organisational,Privacy and protection of PII,,,,,,
 A.5.35,Organisational,Independent review of information security,,,,,,
 A.5.36,Organisational,"Compliance with policies, rules and standards for information security",,,,,,
 A.5.37,Organisational,Documented operating procedures,,,,,,
-A.6.1,People,Screening,Yes,"Staff handle patient data, so identity, right-to-work and reference checks are needed before access is granted",Planned,Lab assumption: no document yet,Head of Operations,
-A.6.2,People,Terms and conditions of employment,Yes,Employment contracts set out security and confidentiality responsibilities,Planned,Lab assumption: no document yet,Head of Operations,
-A.6.3,People,"Information security awareness, education and training",Yes,Staff are the main target of phishing and handle patient data,Partially implemented,Register R-002 existing controls,Head of Operations,R-002; R-005
-A.6.4,People,Disciplinary process,Yes,Security breaches need clear consequences; each policy has an enforcement section,Planned,Lab assumption: no document yet,Head of Operations,
-A.6.5,People,Responsibilities after termination or change of employment,Yes,"Leavers keep knowledge of patient systems, so access must end and duties be reminded",Planned,Lab assumption: no document yet,Head of Operations,
-A.6.6,People,Confidentiality or non-disclosure agreements,Yes,"Staff, contractors and suppliers may see confidential or patient data",Implemented,Lab assumption: no document yet,Head of Operations,
-A.6.7,People,Remote working,Yes,Hybrid working means staff reach patient systems from home,Partially implemented,isms-scope.md,CTO,
-A.6.8,People,Information security event reporting,Yes,Fast reporting of lost devices and phishing keeps breach response inside 72 hours,Partially implemented,isms-scope.md,Head of Operations,R-010
-A.7.1,Physical,Physical security perimeters,Yes,London office holds laptops and printed material,Partially implemented,Lab assumption: no document yet,Head of Operations,R-012
-A.7.2,Physical,Physical entry,Yes,Only authorised people should enter the office,Partially implemented,Lab assumption: no document yet,Head of Operations,R-012
-A.7.3,Physical,"Securing offices, rooms and facilities",Yes,Office areas hold equipment and some printed papers,Partially implemented,Lab assumption: no document yet,Head of Operations,
-A.7.4,Physical,Physical security monitoring,Yes,"The single office entrance has no guard, so proportionate monitoring is needed",Partially implemented,Lab assumption: no document yet,Head of Operations,
-A.7.5,Physical,Protecting against physical and environmental threats,Yes,Office needs standard fire and flood protection; data centre protection is inherited from AWS,Implemented,"Building fire risk assessment; AWS compliance reports from AWS Artifact ""(to be collected)""",Head of Operations,
-A.7.6,Physical,Working in secure areas,No,Northbridge has no designated secure areas. Patient data sits in AWS and is protected by logical access controls. Revisit if the office changes,Excluded,Lab assumption: no document yet,Head of Operations,
-A.7.7,Physical,Clear desk and clear screen,Yes,Staff work in the office and at home with patient data on screen,Partially implemented,01-governance/acceptable-use-policy.md,Head of Operations,R-012
-A.7.8,Physical,Equipment siting and protection,Yes,Office equipment must be placed to reduce theft and shoulder-surfing; servers are in AWS,Implemented,Lab assumption: no document yet,Head of Operations,
-A.7.9,Physical,Security of assets off-premises,Yes,Laptops leave the office and hold patient data,Partially implemented,Lab assumption: no document yet,CTO,R-009
-A.7.10,Physical,Storage media,Yes,USB drives and removable media can carry patient data out,Partially implemented,isms-scope.md,CTO,
-A.7.11,Physical,Supporting utilities,Yes,Office power and internet are needed; data centre utilities are inherited from AWS,Implemented,"Building lease; AWS compliance reports from AWS Artifact ""(to be collected)""",Head of Operations,
-A.7.12,Physical,Cabling security,Yes,Office cabling is in a managed building; data centre cabling is inherited from AWS,Implemented,"Building management confirmation; AWS compliance reports from AWS Artifact ""(to be collected)""",Head of Operations,
-A.7.13,Physical,Equipment maintenance,Yes,Laptops and office equipment need maintenance; data centre equipment is maintained by AWS,Partially implemented,Lab assumption: no document yet,CTO,
+A.6.1,People,Screening,Yes,"Staff handle patient data, so identity and reference checks are needed before access",Planned,Lab assumption: no document yet,Head of Operations,
+A.6.2,People,Terms and conditions of employment,Yes,Contracts should set out security and confidentiality duties,Planned,Lab assumption: no document yet,Head of Operations,
+A.6.3,People,"Information security awareness, education and training",Yes,Staff are the main target of phishing and handle patient data,Partially implemented,Register R-002 existing controls (annual awareness training),Head of Operations,R-002; R-005
+A.6.4,People,Disciplinary process,Yes,"Security breaches need clear, fair consequences",Partially implemented,01-governance/policies/ (enforcement section in each policy),Head of Operations,
+A.6.5,People,Responsibilities after termination or change of employment,Yes,"Leavers keep knowledge of patient systems, so access must end quickly",Partially implemented,01-governance/policies/access-control-policy.md (statement 5),Head of Operations,
+A.6.6,People,Confidentiality or non-disclosure agreements,Yes,"Staff, contractors and suppliers may see confidential or patient data",Planned,Lab assumption: no document yet,Head of Operations,
+A.6.7,People,Remote working,Yes,Remote working means staff reach patient systems from home,Partially implemented,"01-governance/policies/acceptable-use-policy.md (statements 2, 3 and 9); 01-governance/policies/access-control-policy.md (statement 3)",CTO,
+A.6.8,People,Information security event reporting,Yes,Quick reporting of lost devices and phishing protects the 72-hour ICO deadline,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 4); Register R-010 existing controls,Head of Operations,R-010
+A.7.1,Physical,Physical security perimeters,Yes,London office holds laptops and printed material,Partially implemented,Register R-012 existing controls (keycard entry),Head of Operations,R-012
+A.7.2,Physical,Physical entry,Yes,Only authorised people should enter the office,Partially implemented,Register R-012 existing controls (keycard entry; visitor logbook),Head of Operations,R-012
+A.7.3,Physical,"Securing offices, rooms and facilities",Yes,Office areas hold equipment and some printed papers,Planned,Lab assumption: no document yet,Head of Operations,
+A.7.4,Physical,Physical security monitoring,Yes,"The office entrance has no guard, so proportionate monitoring is needed",Planned,Lab assumption: no document yet,Head of Operations,
+A.7.5,Physical,Protecting against physical and environmental threats,Yes,Office needs fire and flood protection; data centre protection is inherited from AWS,Planned,AWS Artifact reports (to be collected); office: Lab assumption: no document yet,Head of Operations,
+A.7.6,Physical,Working in secure areas,No,Northbridge has no designated secure areas. Patient data sits in AWS behind logical access controls. Revisit if the office changes,Excluded,"N/A, excluded",Head of Operations,
+A.7.7,Physical,Clear desk and clear screen,Yes,Staff work in the office and at home with patient data on screen,Planned,01-governance/policies/acceptable-use-policy.md (statement 3); Register R-012 planned controls (automated lock),Head of Operations,R-012
+A.7.8,Physical,Equipment siting and protection,Yes,Office equipment should be placed to reduce theft and shoulder-surfing,Planned,Lab assumption: no document yet,Head of Operations,
+A.7.9,Physical,Security of assets off-premises,Yes,Laptops leave the office and hold patient data,Planned,01-governance/policies/acceptable-use-policy.md (statement 9); Register R-009 planned controls,CTO,R-009
+A.7.10,Physical,Storage media,Yes,USB drives and removable media can carry patient data out,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 5),CTO,
+A.7.11,Physical,Supporting utilities,Yes,Office power and internet are needed; data centre utilities are inherited from AWS,Planned,AWS Artifact reports (to be collected); office: Lab assumption: no document yet,Head of Operations,
+A.7.12,Physical,Cabling security,Yes,Office cabling sits in a managed building; data centre cabling is inherited from AWS,Planned,AWS Artifact reports (to be collected); office: Lab assumption: no document yet,Head of Operations,
+A.7.13,Physical,Equipment maintenance,Yes,Laptops and office equipment need maintenance,Planned,Lab assumption: no document yet,CTO,
 A.7.14,Physical,Secure disposal or re-use of equipment,Yes,Old laptops may hold patient data,Planned,Lab assumption: no document yet,CTO,
 A.8.1,Technological,User endpoint devices,,,,,,
 A.8.2,Technological,Privileged access rights,,,,,,
