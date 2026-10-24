@@ -7,7 +7,7 @@ A.5.5,Organisational,Contact with authorities,Yes,Contacts with the ICO and law 
 A.5.6,Organisational,Contact with special interest groups,Yes,Staying informed through NCSC and security groups keeps defences current,Planned,Lab assumption: no document yet,Head of Security and Compliance,
 A.5.7,Organisational,Threat intelligence,Yes,Threat information helps prioritise defences for a patient-data platform,Planned,Lab assumption: no document yet,CTO,
 A.5.8,Organisational,Information security in project management,Yes,"New projects, such as ML features, need a security review from the start",Planned,Lab assumption: no document yet,CTO,
-A.5.9,Organisational,Inventory of information and other associated assets,Yes,You cannot protect assets you have not listed,Partially implemented,Register R-009 existing controls (device inventory only),CTO,
+A.5.9,Organisational,Inventory of information and other associated assets,Yes,You cannot protect assets you have not listed,Partially implemented,05-asset-cmdb/asset-register.csv,CTO,
 A.5.10,Organisational,Acceptable use of information and other associated assets,Yes,"Staff need clear rules for using devices, accounts and data",Partially implemented,01-governance/policies/acceptable-use-policy.md,Head of Operations,R-011
 A.5.11,Organisational,Return of assets,Yes,Leavers must hand back laptops and equipment,Planned,Lab assumption: no document yet,Head of Operations,
 A.5.12,Organisational,Classification of information,Yes,Patient data is special category data and needs classification levels,Planned,Lab assumption: no document yet,Head of Security and Compliance,

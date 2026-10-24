@@ -1,0 +1,21 @@
+Asset ID,Asset name,Type,Description,Owner,Data classification,Environment,Hosting or vendor,Source (where this came from),Linked risks,Linked controls,Status
+AS-001,Appointment scheduling platform,Business service,Platform clinics use to book patient appointments,CTO,patient-data,prod,AWS,01-governance/isms-scope.md; register R-003,R-003,A.5.30; A.8.13; A.8.14,Active
+AS-002,ML triage feature,Application feature,Machine learning feature that suggests appointment urgency,CTO,patient-data,prod,AWS,01-governance/isms-scope.md; register R-007,R-007,NIST AI RMF MEASURE; MANAGE; EU AI Act Art. 14 and 15,Active
+AS-003,Web application,Application,Customer-facing web application,CTO,patient-data,prod,AWS,register R-008,R-008,A.8.8; A.8.28,Active
+AS-004,Patient appointment data,Data,Patient appointment records and exports,CTO,patient-data,prod,AWS,register R-001,R-001,A.8.3; A.8.9,Active
+AS-005,Patient database,Data store,Holds patient records,CTO,patient-data,prod,AWS,register R-004,R-004,A.5.15; A.5.18; A.8.3; A.8.15,Active
+AS-006,Patient contact details held by SMS provider,Data held by supplier,Patient phone numbers used to send reminders,Head of Operations,patient-data,prod,SMS provider,register R-006,R-006,A.5.19; A.5.20; A.5.21; A.5.22,Active
+AS-007,Employee feedback data,Data,Survey responses from staff,Head of Operations,internal,prod,Survey SaaS provider,register R-013,R-013,A.5.19; A.5.22; A.5.23; A.8.13,Active
+AS-008,AWS production account,Cloud account,Production AWS account,CTO,patient-data,prod,AWS,01-governance/isms-scope.md,,,Active
+AS-009,AWS staging account,Cloud account,Staging AWS account,CTO,internal,staging,AWS,01-governance/isms-scope.md,,,Active
+AS-010,Corporate laptops,Hardware,Staff laptops,CTO,patient-data,n/a,Company-owned,"register R-005, R-009",R-005; R-009,A.7.9; A.8.1; A.8.7; A.8.24,Active
+AS-011,Shared drive,Data store,Shared files used by staff,CTO,confidential,n/a,Company-owned,register R-005,R-005,A.8.13,Active
+AS-012,Google Workspace accounts,SaaS,Staff email and documents,CTO,confidential,n/a,Google,01-governance/isms-scope.md; register R-002,R-002,A.6.3; A.8.5,Active
+AS-013,Slack,SaaS,Staff messaging,CTO,internal,n/a,Slack,01-governance/isms-scope.md,,,Active
+AS-014,GitHub organisation,SaaS,Source code and CI/CD pipeline,CTO,confidential,n/a,GitHub,01-governance/isms-scope.md,,,Active
+AS-015,London office,Location,Office with keycard entry and visitor logbook,Head of Operations,n/a,n/a,Landlord,register R-012,R-012,A.7.1; A.7.2; A.7.7,Active
+AS-016,SMS provider,Supplier,Third party that sends patient reminders,Head of Operations,patient-data,n/a,SMS provider,register R-006,R-006,A.5.19; A.5.20; A.5.21; A.5.22,Active
+AS-017,Survey SaaS provider,Supplier,Non-critical internal survey tool,Head of Operations,internal,n/a,Survey SaaS provider,register R-013,R-013,A.5.19; A.5.22,Active
+AS-018,Patient exports bucket (lab),Cloud storage,"Test bucket built from the s3-secure module on Day 11. Tags: Owner CTO, DataClassification patient-data",CTO,patient-data,lab,AWS,"Terraform tags, 06-infrastructure/modules/s3-secure",R-001,A.8.3; A.8.24,Destroyed after lab test
+AS-019,CloudTrail log bucket and trail (lab),Cloud storage and logging,Test trail and log bucket built on Day 12. Tags: Owner Head of Security and Compliance,Head of Security and Compliance,confidential,lab,AWS,"Terraform tags, 06-infrastructure/modules/cloudtrail-logging",R-004,A.8.15,Destroyed after lab test
+AS-020,Patient Telehealth Video Portal,Application,Web-based video consultation platform enabling real-time remote clinical consultations between patients and healthcare staff,CTO,Confidential (EHR/ Patient Data),AWS eu-west-2 (London),,Mu own addition,,,
