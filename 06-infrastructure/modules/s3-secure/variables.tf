@@ -22,3 +22,8 @@ variable "environment" {
   type    = string
   default = "lab"
 }
+variable "force_destroy" {
+  type        = bool
+  default     = false
+  description = "Lab only: allow Terraform to delete the bucket even if it holds files."
+}
