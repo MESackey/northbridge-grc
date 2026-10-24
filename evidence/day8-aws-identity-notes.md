@@ -8,7 +8,7 @@
 ## Findings and fixes
 | Finding | Fix | Evidence |
 |---|---|---|
-| grc-admin had no MFA | Assigned a virtual MFA device | day8-aws-mfa-assigned.png |
+| grc-admin had no MFA | Assigned a virtual MFA device | day8-aws-mfa-assigned.jpg |
 | CLIusage1 access key unused for 589 days | Key deactivated (then deleted) | day8-aws-stale-key-inactive.png |
 | Console password for grc-admin unknown | Reset by the root account | n/a |
 
