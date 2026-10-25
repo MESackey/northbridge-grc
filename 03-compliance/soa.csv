@@ -10,13 +10,13 @@ A.5.8,Organisational,Information security in project management,Yes,"New project
 A.5.9,Organisational,Inventory of information and other associated assets,Yes,You cannot protect assets you have not listed,Partially implemented,05-asset-cmdb/asset-register.csv,CTO,
 A.5.10,Organisational,Acceptable use of information and other associated assets,Yes,"Staff need clear rules for using devices, accounts and data",Partially implemented,01-governance/policies/acceptable-use-policy.md,Head of Operations,R-011
 A.5.11,Organisational,Return of assets,Yes,Leavers must hand back laptops and equipment,Planned,Lab assumption: no document yet,Head of Operations,
-A.5.12,Organisational,Classification of information,Yes,Patient data is special category data and needs classification levels,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.12,Organisational,Classification of information,Yes,Patient data is special category data and needs classification levels,Partially implemented,"05-asset-cmdb/asset-register.csv (classification column); 06-infrastructure/modules/s3-secure/variables.tf (allowed values: public, internal, confidential, patient-data)",Head of Security and Compliance,
 A.5.13,Organisational,Labelling of information,Yes,Labels show staff how to handle each class of information,Planned,Lab assumption: no document yet,Head of Security and Compliance,
 A.5.14,Organisational,Information transfer,Yes,Patient data must only move through approved channels,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 5),CTO,
-A.5.15,Organisational,Access control,Yes,Access to patient data must follow need-to-know,Planned,"01-governance/policies/access-control-policy.md (policy written; enforcement planned, see R-004)",CTO,R-004
-A.5.16,Organisational,Identity management,Yes,Every user needs their own account so actions can be traced,Partially implemented,01-governance/policies/access-control-policy.md (statement 2),CTO,
-A.5.17,Organisational,Authentication information,Yes,Passwords and MFA tokens must be kept secret and handled safely,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 2); 01-governance/policies/access-control-policy.md (statement 3),CTO,
-A.5.18,Organisational,Access rights,Yes,"Access rights must be approved, reviewed and removed on time",Planned,"01-governance/policies/access-control-policy.md (policy written; reviews planned, see R-004)",CTO,R-004
+A.5.15,Organisational,Access control,Yes,Access to patient data must follow need-to-know,Planned,"01-governance/policies/access-control-policy.md (policy written; enforcement planned, see R-004); 06-infrastructure/modules/iam-baseline (group-based access, tested in Day 12 lab)",CTO,R-004
+A.5.16,Organisational,Identity management,Yes,Every user needs their own account so actions can be traced,Partially implemented,01-governance/policies/access-control-policy.md (statement 2); evidence/day8-aws-identity-notes.md (stale user key deactivated),CTO,
+A.5.17,Organisational,Authentication information,Yes,Passwords and MFA tokens must be kept secret and handled safely,Partially implemented,"01-governance/policies/acceptable-use-policy.md (statement 2); 01-governance/policies/access-control-policy.md (statement 3); 06-infrastructure/modules/iam-baseline (password policy, tested in Day 12 lab); evidence/day8-aws-identity-notes.md",CTO,
+A.5.18,Organisational,Access rights,Yes,"Access rights must be approved, reviewed and removed on time",Planned,"01-governance/policies/access-control-policy.md (policy written; reviews planned, see R-004); 06-infrastructure/modules/iam-baseline (read-only auditors group, tested in Day 12 lab); evidence/day8-aws-identity-notes.md",CTO,R-004
 A.5.19,Organisational,Information security in supplier relationships,Yes,Suppliers such as the SMS provider handle patient data,Partially implemented,Register R-006 existing controls (basic confidentiality clause),Head of Operations,R-006; R-013
 A.5.20,Organisational,Addressing information security within supplier agreements,Yes,Supplier contracts must state security and breach-notification duties,Partially implemented,Register R-006 existing controls (basic confidentiality clause),Head of Operations,R-006
 A.5.21,Organisational,Managing information security in the ICT supply chain,Yes,"Risks in the supply chain, such as software and cloud vendors, need managing",Planned,"01-governance/policies/ai-tools-policy.md (AI vendors only; wider process planned, see R-006)",Head of Operations,R-006
@@ -29,13 +29,13 @@ A.5.27,Organisational,Learning from information security incidents,Yes,Lessons f
 A.5.28,Organisational,Collection of evidence,Yes,Evidence must be collected properly for ICO or legal needs,Planned,Register R-010 planned controls (breach runbook),CTO,R-010
 A.5.29,Organisational,Information security during disruption,Yes,Security must hold up during an outage or disruption,Planned,Lab assumption: no document yet,CTO,
 A.5.30,Organisational,ICT readiness for business continuity,Yes,"Clinics rely on the platform, so recovery readiness matters",Partially implemented,Register R-003 existing controls (daily backups; London region hosting),CTO,R-003
-A.5.31,Organisational,"Legal, statutory, regulatory and contractual requirements",,,,,,
-A.5.32,Organisational,Intellectual property rights,,,,,,
-A.5.33,Organisational,Protection of records,,,,,,
-A.5.34,Organisational,Privacy and protection of PII,,,,,,
-A.5.35,Organisational,Independent review of information security,,,,,,
-A.5.36,Organisational,"Compliance with policies, rules and standards for information security",,,,,,
-A.5.37,Organisational,Documented operating procedures,,,,,,
+A.5.31,Organisational,"Legal, statutory, regulatory and contractual requirements",Yes,"UK GDPR, the Data Protection Act, SOC 2 commitments and contracts apply to a patient-data platform",Partially implemented,"01-governance/isms-scope.md (section 5, applicable requirements)",Head of Security and Compliance,
+A.5.32,Organisational,Intellectual property rights,Yes,Source code and software licences are intellectual property that must be respected and protected,Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.33,Organisational,Protection of records,Yes,"Records such as logs, policies and audit evidence must be protected from loss and tampering",Planned,Lab assumption: no document yet,Head of Security and Compliance,
+A.5.34,Organisational,Privacy and protection of PII,Yes,Patient data is personal and special category data under UK GDPR,Partially implemented,01-governance/isms-scope.md (DPO role; UK GDPR in scope); 01-governance/policies/ai-tools-policy.md (DPO audits AI systems),Head of Security and Compliance,
+A.5.35,Organisational,Independent review of information security,Yes,Security needs a review by someone independent of the people running it,Partially implemented,01-governance/three-lines-of-defence.md; 01-governance/isms-scope.md (internal audit outsourced; first audit not yet done),CEO,
+A.5.36,Organisational,"Compliance with policies, rules and standards for information security",Yes,Policy owners must check that staff follow the rules,Partially implemented,"01-governance/policies/acceptable-use-policy.md (section 4, roles); 01-governance/policies/access-control-policy.md (section 4, roles)",Head of Security and Compliance,
+A.5.37,Organisational,Documented operating procedures,Yes,Operating procedures must be written down so work is repeatable,Planned,Lab assumption: no document yet,CTO,
 A.6.1,People,Screening,Yes,"Staff handle patient data, so identity and reference checks are needed before access",Planned,Lab assumption: no document yet,Head of Operations,
 A.6.2,People,Terms and conditions of employment,Yes,Contracts should set out security and confidentiality duties,Planned,Lab assumption: no document yet,Head of Operations,
 A.6.3,People,"Information security awareness, education and training",Yes,Staff are the main target of phishing and handle patient data,Partially implemented,Register R-002 existing controls (annual awareness training),Head of Operations,R-002; R-005
@@ -58,37 +58,37 @@ A.7.11,Physical,Supporting utilities,Yes,Office power and internet are needed; d
 A.7.12,Physical,Cabling security,Yes,Office cabling sits in a managed building; data centre cabling is inherited from AWS,Planned,AWS Artifact reports (to be collected); office: Lab assumption: no document yet,Head of Operations,
 A.7.13,Physical,Equipment maintenance,Yes,Laptops and office equipment need maintenance,Planned,Lab assumption: no document yet,CTO,
 A.7.14,Physical,Secure disposal or re-use of equipment,Yes,Old laptops may hold patient data,Planned,Lab assumption: no document yet,CTO,
-A.8.1,Technological,User endpoint devices,,,,,,
-A.8.2,Technological,Privileged access rights,,,,,,
-A.8.3,Technological,Information access restriction,,,,,,
-A.8.4,Technological,Access to source code,,,,,,
-A.8.5,Technological,Secure authentication,,,,,,
-A.8.6,Technological,Capacity management,,,,,,
-A.8.7,Technological,Protection against malware,,,,,,
-A.8.8,Technological,Management of technical vulnerabilities,,,,,,
-A.8.9,Technological,Configuration management,,,,,,
-A.8.10,Technological,Information deletion,,,,,,
-A.8.11,Technological,Data masking,,,,,,
-A.8.12,Technological,Data leakage prevention,,,,,,
-A.8.13,Technological,Information backup,,,,,,
-A.8.14,Technological,Redundancy of information processing facilities,,,,,,
-A.8.15,Technological,Logging,,,,,,
-A.8.16,Technological,Monitoring activities,,,,,,
-A.8.17,Technological,Clock synchronization,,,,,,
-A.8.18,Technological,Use of privileged utility programs,,,,,,
-A.8.19,Technological,Installation of software on operational systems,,,,,,
-A.8.20,Technological,Networks security,,,,,,
-A.8.21,Technological,Security of network services,,,,,,
-A.8.22,Technological,Segregation of networks,,,,,,
-A.8.23,Technological,Web filtering,,,,,,
-A.8.24,Technological,Use of cryptography,,,,,,
-A.8.25,Technological,Secure development life cycle,,,,,,
-A.8.26,Technological,Application security requirements,,,,,,
-A.8.27,Technological,Secure system architecture and engineering principles,,,,,,
-A.8.28,Technological,Secure coding,,,,,,
-A.8.29,Technological,Security testing in development and acceptance,,,,,,
-A.8.30,Technological,Outsourced development,,,,,,
-A.8.31,Technological,"Separation of development, test and production environments",,,,,,
-A.8.32,Technological,Change management,,,,,,
-A.8.33,Technological,Test information,,,,,,
-A.8.34,Technological,Protection of information systems during audit testing,,,,,,
+A.8.1,Technological,User endpoint devices,Yes,Laptops hold patient data and leave the office,Planned,01-governance/policies/acceptable-use-policy.md (statements 6 and 9); Register R-009 planned controls (disk encryption via MDM),CTO,R-009
+A.8.2,Technological,Privileged access rights,Yes,"Admin rights are powerful, so they are separate from day-to-day accounts",Partially implemented,01-governance/policies/access-control-policy.md (statement 7); evidence/day8-aws-identity-notes.md,CTO,
+A.8.3,Technological,Information access restriction,Yes,"Patient data must only be reachable by people who need it, and never publicly",Planned,"06-infrastructure/modules/s3-secure (blocks public access; tested in Day 11 lab, destroyed after test, not deployed); 01-governance/policies/access-control-policy.md (statement 1)",CTO,R-001; R-004
+A.8.4,Technological,Access to source code,Yes,Source code is a key asset and should only be changed by authorised engineers,Planned,Lab assumption: no document yet,CTO,
+A.8.5,Technological,Secure authentication,Yes,"MFA is in use but not yet phishing-resistant, so the policy target is not met",Partially implemented,Register R-002 existing controls (authenticator-app MFA); evidence/day8-aws-identity-notes.md,CTO,R-002
+A.8.6,Technological,Capacity management,Yes,The platform must keep working as clinic usage grows,Planned,Lab assumption: no document yet,CTO,
+A.8.7,Technological,Protection against malware,Yes,Ransomware and malware are a real threat to laptops and shared files,Partially implemented,Register R-005 existing controls (standard antivirus),CTO,R-005
+A.8.8,Technological,Management of technical vulnerabilities,Yes,Known flaws in software libraries are actively exploited,Partially implemented,Register R-008 existing controls (periodic manual code reviews),CTO,R-008
+A.8.9,Technological,Configuration management,Yes,Cloud settings must be defined as code so they are consistent and reviewable,Planned,"06-infrastructure/modules/ (Terraform baseline modules, tested Days 10 to 12, not deployed); Register R-001 planned controls",CTO,R-001
+A.8.10,Technological,Information deletion,Yes,Patient data must be deleted when no longer needed,Planned,Lab assumption: no document yet,CTO,
+A.8.11,Technological,Data masking,Yes,Test and support work should not expose real patient identifiers,Planned,Lab assumption: no document yet,CTO,
+A.8.12,Technological,Data leakage prevention,Yes,Patient data must not leak to personal devices or unapproved AI and SaaS tools,Partially implemented,01-governance/policies/acceptable-use-policy.md (statement 5); 01-governance/policies/ai-tools-policy.md (statement 2); Register R-011 existing controls,CTO,R-011
+A.8.13,Technological,Information backup,Yes,"Clinics rely on the platform, so data must be recoverable",Partially implemented,Register R-003 existing controls (daily backups); Register R-005 existing controls (periodic manual server backups),CTO,R-003; R-005; R-013
+A.8.14,Technological,Redundancy of information processing facilities,Yes,Single-region hosting means one outage can stop the service,Planned,Register R-003 planned controls (multi-AZ deployment),CTO,R-003
+A.8.15,Technological,Logging,Yes,"Logs show who did what, which supports investigation and detecting snooping",Planned,"06-infrastructure/modules/cloudtrail-logging (tested in Day 12 lab, destroyed after test, not deployed); Register R-004 planned controls (audit logging of record views)",CTO,R-004
+A.8.16,Technological,Monitoring activities,Yes,"Unusual activity must be noticed, for example staff viewing many patient records",Planned,Register R-004 planned controls (anomaly alerts),CTO,
+A.8.17,Technological,Clock synchronization,Yes,Accurate clocks keep logs usable as evidence,Planned,Lab assumption: no document yet,CTO,
+A.8.18,Technological,Use of privileged utility programs,Yes,Powerful admin tools can bypass normal controls and need restricting,Planned,Lab assumption: no document yet,CTO,
+A.8.19,Technological,Installation of software on operational systems,Yes,Software on production systems must be controlled,Planned,Lab assumption: no document yet,CTO,
+A.8.20,Technological,Networks security,Yes,Networks carrying patient data must be protected,Planned,Lab assumption: no document yet,CTO,
+A.8.21,Technological,Security of network services,Yes,Network services from suppliers need security requirements,Planned,Lab assumption: no document yet,CTO,
+A.8.22,Technological,Segregation of networks,Yes,Separating networks limits how far ransomware or an intruder can spread,Planned,Register R-005 planned controls (network segmentation),CTO,R-005
+A.8.23,Technological,Web filtering,Yes,Blocking risky websites and unapproved SaaS reduces shadow IT and data leakage,Planned,Register R-011 planned controls (CASB and DNS filtering),CTO,R-011
+A.8.24,Technological,Use of cryptography,Yes,Patient data must be encrypted at rest and on laptops,Partially implemented,"Register R-001 existing controls (encryption at rest); 06-infrastructure/modules/s3-secure (default encryption, tested in lab)",CTO,R-009
+A.8.25,Technological,Secure development life cycle,Yes,Security has to be built into how software is developed,Planned,"01-governance/policies/ai-tools-policy.md (statement 4: policy written; pipeline scanning planned, see R-008)",CTO,
+A.8.26,Technological,Application security requirements,Yes,Applications handling patient data need security requirements from the start,Planned,Lab assumption: no document yet,CTO,
+A.8.27,Technological,Secure system architecture and engineering principles,Yes,Secure-by-default building blocks make safe design repeatable,Planned,"06-infrastructure/modules/ (Terraform baseline modules, tested in lab)",CTO,
+A.8.28,Technological,Secure coding,Yes,Insecure code is a common cause of breaches,Partially implemented,Register R-008 existing controls (periodic manual code reviews); 01-governance/policies/ai-tools-policy.md (statement 4),CTO,R-008
+A.8.29,Technological,Security testing in development and acceptance,Yes,Security testing should happen before code reaches production,Planned,Register R-008 planned controls (automated dependency scanning in pipeline),CTO,
+A.8.30,Technological,Outsourced development,No,Engineering is done in-house by the CTO's team. Revisit if development is ever outsourced,Excluded,01-governance/three-lines-of-defence.md (CTO and Engineering),CTO,
+A.8.31,Technological,"Separation of development, test and production environments",Yes,Test work must not touch production patient data,Partially implemented,01-governance/isms-scope.md (separate production and staging AWS accounts),CTO,
+A.8.32,Technological,Change management,Yes,Changes to production need review and approval,Planned,Lab assumption: no document yet,CTO,
+A.8.33,Technological,Test information,Yes,Test data should not contain real patient data,Planned,Lab assumption: no document yet,CTO,
+A.8.34,Technological,Protection of information systems during audit testing,Yes,Audit testing must not disrupt or expose production systems,Planned,Lab assumption: no document yet,Head of Security and Compliance,
