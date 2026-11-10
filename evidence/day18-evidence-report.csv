@@ -1,0 +1,5 @@
+checked_at_utc,check_id,resource,result,detail,iso27001_2022_control
+2026-11-10 08:37:20,S3-PAB,cp-exports-temp-mes,PASS,all four settings on,A.8.3 Information access restriction
+2026-11-10 08:37:21,IAM-MFA,grc-admin,PASS,MFA device present,A.8.5 Secure authentication
+2026-11-10 08:37:21,IAM-MFA,grc-auditor,PASS,MFA device present,A.8.5 Secure authentication
+2026-11-10 08:37:21,ROOT-MFA,root account,PASS,root MFA enabled,A.8.5 Secure authentication; A.8.2 Privileged access rights
