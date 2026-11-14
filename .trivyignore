@@ -1,0 +1,5 @@
+# Trivy findings accepted or planned. The pipeline blocks HIGH and CRITICAL findings except these.
+# AWS-0132: S3 bucket not using a customer-managed key. PLANNED for patient data only (Day 21).
+AWS-0132
+# AWS-0015: CloudTrail not using a customer-managed key. PLANNED with the keys above (Day 21).
+AWS-0015

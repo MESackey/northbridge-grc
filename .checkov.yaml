@@ -1,0 +1,39 @@
+# Checkov settings for northbridge-grc (read automatically by .github/workflows/security.yml).
+# Every skip below is a recorded decision, not a way to make the pipeline green.
+# Decisions marked "Day 21" are moved into the risk register on Day 21.
+framework:
+  - terraform
+directory:
+  - .
+quiet: true
+compact: true
+
+skip-path:
+  # Deliberately insecure test code for scanner comparison. Never applied to AWS.
+  - 06-infrastructure/day17-scan-compare/bad
+  # One-off Day 10 test bucket, destroyed after the test.
+  - 06-infrastructure/day10-s3-test
+
+skip-check:
+  # S3 access logging missing. PLANNED: add a log bucket to the s3-secure module (Day 21).
+  - CKV_AWS_18
+  # S3 and EBS not using customer-managed KMS keys. PLANNED for patient data only (Day 21).
+  - CKV_AWS_145
+  - CKV_AWS_189
+  # CloudTrail logs not encrypted with a customer-managed key. PLANNED with the keys above (Day 21).
+  - CKV_AWS_35
+  # No cross-region replication. ACCEPTED: cost and data-residency. Revisit when availability requirements are set.
+  - CKV_AWS_144
+  # No S3 event notifications. ACCEPTED: no consumer for them. Revisit with SIEM work (Day 22).
+  - CKV2_AWS_62
+  # CloudTrail has no SNS topic or CloudWatch Logs integration. ACCEPTED for now: logs go to S3. Revisit with SIEM work (Day 22).
+  - CKV_AWS_252
+  - CKV2_AWS_10
+  # S3 buckets without a lifecycle rule. TRACKED (Arko rated this CRITICAL on Day 16, judged housekeeping). Day 21.
+  - CKV2_AWS_61
+  # IAM password expiry within 90 days. ACCEPTED: NCSC and NIST advise against forced periodic expiry; MFA is the control.
+  - CKV_AWS_9
+  # IAM password reuse prevention not set. TO FIX in the iam-baseline module (Day 21).
+  - CKV_AWS_13
+  # Security group not attached to anything. REJECTED: artefact of the Day 17 test folder, which has no servers.
+  - CKV2_AWS_5
