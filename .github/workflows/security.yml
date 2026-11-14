@@ -36,7 +36,13 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install semgrep==1.184.0
-      - run: semgrep scan --config p/default --metrics=off --error --exclude 06-infrastructure/day17-scan-compare/bad
+      -      # The two excluded rules flag customer-managed keys (CMKs) for EBS and CloudTrail.
+             # Same decision as CKV_AWS_189, CKV_AWS_35 and AWS-0015: PLANNED for patient data only (Day 21).
+             - run: >-
+                 semgrep scan --config p/default --metrics=off --error
+                 --exclude 06-infrastructure/day17-scan-compare/bad
+                 --exclude-rule terraform.aws.security.aws-ebs-volume-encrypted-with-cmk.aws-ebs-volume-encrypted-with-cmk
+                 --exclude-rule terraform.aws.security.aws-cloudtrail-encrypted-with-cmk.aws-cloudtrail-encrypted-with-cmk
 
   checkov:
     runs-on: ubuntu-24.04
