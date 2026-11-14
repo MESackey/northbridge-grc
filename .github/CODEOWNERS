@@ -1,0 +1,11 @@
+   # Default owner for everything in the repo
+   *                    @MESackey
+
+   # Changes to the pipeline and to scanner exceptions need the owner's review
+   /.github/            @MESackey
+   /.checkov.yaml       @MESackey
+   /.trivyignore        @MESackey
+
+   # Risk and control records
+   /02-risk/            @MESackey
+   /03-compliance/      @MESackey
