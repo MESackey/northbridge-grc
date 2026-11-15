@@ -33,7 +33,7 @@ skip-check:
   - CKV2_AWS_61
   # IAM password expiry within 90 days. ACCEPTED: NCSC and NIST advise against forced periodic expiry; MFA is the control.
   - CKV_AWS_9
-  # IAM password reuse prevention not set. TO FIX in the iam-baseline module (Day 21).
+  # IAM password reuse history is 5 and Checkov expects 24. PLANNED: raise to 24 with R-016 (Day 21 register).
   - CKV_AWS_13
   # Security group not attached to anything. REJECTED: artefact of the Day 17 test folder, which has no servers.
   - CKV2_AWS_5
